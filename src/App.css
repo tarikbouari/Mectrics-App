@@ -37,3 +37,40 @@ h3 {
 .setting {
   color: #fff;
 }
+
+.containerCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.cardCoin {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  background-color: #3E61A3;
+  gap:1rem;
+
+}
+
+.arrow-right {
+  align-self: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.coinlogo {
+  width: 80%;
+  height: auto;
+}
+
+.symbol {
+  display:flex;
+  flex-direction: column;
+  color:#fff;
+ 
+}
