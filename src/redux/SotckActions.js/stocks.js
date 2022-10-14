@@ -7,6 +7,13 @@ const url = 'https://coinranking1.p.rapidapi.com/coins';
 
 // Create stock Action type
 const GET_STOCK = 'metrics/stocks/GET_STOCK';
+// const TOPGAINERS = 'metrics/stocks/TOPGAINERS';
+// const TOPLOSERS = 'metrics/stocks/TOPLOSERS';
+
+// export const getTopGainers = () {
+//   type: TOPGAINERS,
+//   payload:
+// }
 
 export const getStock = createAsyncThunk(GET_STOCK, async () => {
   try {
