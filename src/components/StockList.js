@@ -16,9 +16,6 @@ const Home = () => {
     }
   }, []);
 
-  dispatch(getCategory());
- 
-
   const getTopTen = stocks.filter((item) => item.rank < 10);
   const getTopGainers = stocks.filter(
     (item) => item.rank > 10 && item.rank < 21,
@@ -40,7 +37,7 @@ const Home = () => {
         <div>
           {console.log(stocks)}
           <h3 className="py-3">Whatchlist</h3>
-          <div className="category">
+          <div className="category py-3">
             <form
               className="form"
               name="category"
@@ -56,74 +53,62 @@ const Home = () => {
             </form>
           </div>
           {categoriesState.category === 'Top10' && (
-            <section className="container containerCard">
+            <section>
               <h2 className="title">Most Popular Coins</h2>
-              {getTopTen.map((item) => (
-                <Card
-                  key={item.uuid}
-                  stockName={item.symbol}
-                  image={item.iconUrl}
-                />
-              ))}
+              <div className="container containerCard">
+                {getTopTen.map((item) => (
+                  <Card
+                    key={item.id}
+                    coin={item}
+                  />
+                ))}
+              </div>
             </section>
           )}
 
           {categoriesState.category === 'Gainers' && (
-            <section className="container containerCard">
+            <section>
               <h2 className="title">Top Gainers</h2>
-              {getTopGainers.map((item) => (
-                <Card
-                  key={item.uuid}
-                  stockName={item.symbol}
-                  image={item.iconUrl}
-                />
-              ))}
+              <div className="container containerCard">
+                {getTopGainers.map((item) => (
+                  <Card
+                    key={item.id}
+                    coin={item}
+                  />
+                ))}
+              </div>
             </section>
           )}
 
           {categoriesState.category === 'Losers' && (
-            <section className="container containerCard">
+            <section>
               <h2 className="title">Top Losers</h2>
-              {getTopLosers.map((item) => (
-                <Card
-                  key={item.uuid}
-                  stockName={item.symbol}
-                  image={item.iconUrl}
-                />
-              ))}
+              <div className="container containerCard">
+                {getTopLosers.map((item) => (
+                  <Card
+                    key={item.id}
+                    coin={item}
+                  />
+                ))}
+              </div>
             </section>
           )}
           {categoriesState.category === 'All' && (
-            <section className="container containerCard">
+            <section>
               <h2 className="title">All coins</h2>
-              {stocks.map((item) => (
-                <Card
-                  key={item.uuid}
-                  stockName={item.symbol}
-                  image={item.iconUrl}
-                />
-              ))}
+              <div className="container containerCard">
+                {stocks.map((item) => (
+                  <Card
+                    key={item.id}
+                    coin={item}
+                  />
+                ))}
+              </div>
             </section>
           )}
-
-          {/* {stocks && (
-            <section className="container containerCard">
-              <h2 className="title">All coins</h2>
-              {stocks.map((item) => (
-                <Card
-                  key={item.uuid}
-                  stockName={item.symbol}
-                  image={item.iconUrl}
-                />
-              ))}
-            </section>
-          )} */}
         </div>
       </div>
     </>
   );
 };
-
 export default Home;
-
-// filter((item) => item.rank < 10)
