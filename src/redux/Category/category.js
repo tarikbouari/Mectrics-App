@@ -6,7 +6,7 @@ export const getCategory = (category) => ({
 });
 
 const initialState = {
-  category: 'all',
+  category: 'All',
 };
 
 const CategoryReducer = (state = initialState, action) => {
