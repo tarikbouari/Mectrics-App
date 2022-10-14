@@ -53,14 +53,23 @@ h3 {
   justify-content: space-between;
   align-items: center;
   text-align: right;
-  background-color: #3E61A3;
-  gap:1rem;
-
+  background-color: #3e61a3;
+  gap: 1rem;
 }
 
 .arrow-right {
   align-self: flex-end;
   margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+
+.arrow-left {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  width: 25px;
+  height: 25px;
+  color: #fff;
 }
 
 .coinlogo {
@@ -69,11 +78,65 @@ h3 {
 }
 
 .symbol {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  color:#fff;
- 
+  color: #fff;
 }
+
 .title {
   color: white;
+}
+
+.head-item { 
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.5rem;
+color: #fff;
+}
+
+
+
+
+.head-item img {
+  width: 20%;
+  height: auto;
+}
+
+.detail-list {
+  display:flex;
+  flex-direction: column;
+  gap:0.5rem;
+ 
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+  color:#fff;
+}
+
+.list-item {
+  display:flex;
+  justify-content: space-between;
+  background-color: #35548b;
+  padding: 1rem;
+}
+
+.list-item:nth-child(odd) {
+  background-color: #4168AF;
+}
+
+.list-item:nth-child(3){
+  display: none;
+}
+
+.list-item:nth-child(11){
+  display: none;
+}
+form {
+  border-radius: 4rem;
+}
+form select {
+  padding:0.5rem;
 }
