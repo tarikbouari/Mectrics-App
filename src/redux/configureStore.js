@@ -8,12 +8,12 @@ import { stockReducer } from './SotckActions/stocks';
 import CategoryReducer from './Category/category';
 import detailsReducer from './Details/coinsDetails';
 
-const reducer = combineReducers({
+const rootReducer = combineReducers({
   stock: stockReducer,
   category: CategoryReducer,
   detail: detailsReducer,
 });
 
-const store = configureStore({ reducer }, applyMiddleware(thunk));
+const store = configureStore({ rootReducer }, applyMiddleware(thunk));
 
 export default store;
