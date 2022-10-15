@@ -37,6 +37,10 @@ h3 {
 .setting {
   color: #fff;
 }
+.header-text {
+  color: #fff;
+  text-transform: capitalize;
+}
 
 .containerCard {
   display: grid;
@@ -44,6 +48,9 @@ h3 {
   padding: 1rem;
   width: 100%;
   gap: 1rem;
+}
+.box-img {
+  width: 50%;
 }
 
 .cardCoin {
@@ -72,7 +79,7 @@ h3 {
 }
 
 .coinlogo {
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 
@@ -105,6 +112,9 @@ h3 {
   gap: 0.5rem;
   margin: 0;
 }
+ul {
+  padding-left: 0 !important;
+}
 
 ul li {
   list-style: none;
@@ -125,6 +135,9 @@ ul li {
 .list-item:nth-child(3) {
   display: none;
 }
+.list-item:nth-child(4) {
+  background-color: ;
+} 
 
 .list-item:nth-child(11) {
   display: none;
@@ -136,4 +149,7 @@ form {
 
 form select {
   padding: 0.5rem;
+}
+.homeContainer {
+  margin-bottom: 1rem !important;
 }

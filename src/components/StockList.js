@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <>
       <div className="container p-3 my-3 homeContainer">
-        <h1 className="hi"> WELCOME TO CryptoCoin</h1>
+        <h1 className="header-text"> Welcome To CryptoCoin</h1>
         <div>
           <h3 className="py-3">Whatchlist</h3>
           <div className="category py-3">

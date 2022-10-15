@@ -5,7 +5,7 @@ const Nav = () => (
   <div>
     <header>
       <nav className="container ">
-        <h3>Crypto App</h3>
+        <h3>CryptoCoin</h3>
         <div className="left">
           <FaMicrophoneAlt className="micro" />
           <FaCog className="setting" />

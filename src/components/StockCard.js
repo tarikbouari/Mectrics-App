@@ -23,7 +23,7 @@ const Card = (props) => {
 
   return (
     <div className="cardCoin">
-      <div>
+      <div className="box-img">
         <img src={props.coin.iconUrl} alt="coin-logo" className="coinlogo" />
       </div>
       <div className="symbol">
