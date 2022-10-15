@@ -59,10 +59,6 @@ To get a local copy up and running follow these simple example steps.
 
 _This displays the results of the test suites already written on the project to test for various functionalities and UI implementations. Feel free to edit the UI components and re-run the tests to verify their authenticity_
 
-### Deployment
-
-[Click here](https://deploycryptocoins.herokuapp.com/)
-
 👤 **Tarike Bouari**
 
 - GitHub: [@tarikbouari](https://github.com/tarikbouari)
