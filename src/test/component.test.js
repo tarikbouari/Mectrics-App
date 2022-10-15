@@ -14,7 +14,7 @@ test('renders Home component', () => {
       </Router>
     </Provider>,
   );
-  const screenText = screen.getByText(/WELCOME TO CryptoCoin/i);
+  const screenText = screen.getByText(/Welcome To CryptoCoin/i);
   expect(screenText).toBeInTheDocument();
 });
 
@@ -26,6 +26,6 @@ test('test nav', () => {
       </Router>
     </Provider>,
   );
-  const linkElement = screen.getByText(/Crypto App/i);
+  const linkElement = screen.getByText(/CryptoCoin/i);
   expect(linkElement).toBeInTheDocument();
 });

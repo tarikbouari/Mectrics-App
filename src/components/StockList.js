@@ -30,13 +30,13 @@ const Home = () => {
 
   return (
     <>
-      <div className="container p-3 my-3 homeContainer">
-        <h1 className="header-text"> Welcome To CryptoCoin</h1>
+      <div className="my-3 homeContainer">
+        <h1 className="header-text container"> Welcome To CryptoCoin</h1>
         <div>
-          <h3 className="py-3">Whatchlist</h3>
+          <h3 className="py-3 container">Whatchlist</h3>
           <div className="category py-3">
             <form
-              className="form"
+              className="form container"
               name="category"
               id="category"
               onChange={handleOption}
@@ -52,7 +52,7 @@ const Home = () => {
           {categoriesState.category === 'Top10' && (
             <section>
               <h2 className="title">Most Popular Coins</h2>
-              <div className="container containerCard">
+              <div className="containerCard">
                 {getTopTen.map((item) => (
                   <Card key={item.id} coin={item} />
                 ))}
@@ -63,7 +63,7 @@ const Home = () => {
           {categoriesState.category === 'Gainers' && (
             <section>
               <h2 className="title">Top Gainers</h2>
-              <div className="container containerCard">
+              <div className=" containerCard">
                 {getTopGainers.map((item) => (
                   <Card key={item.id} coin={item} />
                 ))}
@@ -74,7 +74,7 @@ const Home = () => {
           {categoriesState.category === 'Losers' && (
             <section>
               <h2 className="title">Top Losers</h2>
-              <div className="container containerCard">
+              <div className=" containerCard">
                 {getTopLosers.map((item) => (
                   <Card key={item.id} coin={item} />
                 ))}
@@ -83,8 +83,8 @@ const Home = () => {
           )}
           {categoriesState.category === 'All' && (
             <section>
-              <h2 className="title">All coins</h2>
-              <div className="container containerCard">
+              <h2 className="title container">All coins</h2>
+              <div className=" containerCard">
                 {stocks.map((item) => (
                   <Card key={item.id} coin={item} />
                 ))}
