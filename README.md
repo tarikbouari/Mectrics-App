@@ -61,8 +61,7 @@ _This displays the results of the test suites already written on the project to 
 
 ### Deployment
 
-> coming soon :smile:
-
+[Click here](https://deploycryptocoins.herokuapp.com/)
 
 👤 **Tarike Bouari**
 
