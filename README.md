@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-Coming soon 
+[Click here](https://deploycryptocoins.herokuapp.com/) 
 
 
 ## Getting Started
