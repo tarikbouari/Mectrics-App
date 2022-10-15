@@ -79,9 +79,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 - Microverse
-- [Nelson Sakwa For this Awesome Desing](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)
+- [Nelson Sakwa For this Awesome Desing](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 - Inspiration
- -(shuja-shah)[https://github.com/shuja-shah]
+- [shuja-shah](https://github.com/shuja-shah)
 
 ## 📝 License
 
