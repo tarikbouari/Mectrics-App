@@ -7,14 +7,6 @@ const url = 'https://coinranking1.p.rapidapi.com/coins';
 
 // Create stock Action type
 const GET_STOCK = 'metrics/stocks/GET_STOCK';
-// const TOPGAINERS = 'metrics/stocks/TOPGAINERS';
-// const TOPLOSERS = 'metrics/stocks/TOPLOSERS';
-
-// export const getTopGainers = () {
-//   type: TOPGAINERS,
-//   payload:
-// }
-
 export const getStock = createAsyncThunk(GET_STOCK, async () => {
   try {
     const res = await fetch(url, {
@@ -27,7 +19,6 @@ export const getStock = createAsyncThunk(GET_STOCK, async () => {
 
     let stockData = await res.json();
     stockData = stockData.data.coins;
-    console.log(stockData);
     return { stock: stockData };
   } catch (error) {
     return 'failed to fetch';
@@ -39,9 +30,6 @@ export const getStock = createAsyncThunk(GET_STOCK, async () => {
 export const stockReducer = (state = initialstate, action) => {
   switch (action.type) {
     case 'metrics/stocks/GET_STOCK/fulfilled':
-      console.log(state);
-      console.log(action.payload);
-      console.log(action.payload.stock);
       return action.payload.stock;
     default:
       return state;

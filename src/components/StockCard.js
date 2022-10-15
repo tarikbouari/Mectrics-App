@@ -6,8 +6,7 @@ import { useDispatch } from 'react-redux';
 import { getDetails } from '../redux/Details/coinsDetails';
 
 const Card = (props) => {
-  // const { stockName, image, price, symbol } = prop;
-
+ 
   Card.propTypes = {
     coin: propTypes.shape({
       name: propTypes.string.isRequired,
@@ -20,7 +19,6 @@ const Card = (props) => {
   const dispatch = useDispatch();
   const handleDetails = () => {
     dispatch(getDetails(props));
-    console.log(props);
   };
 
   return (
@@ -39,15 +37,4 @@ const Card = (props) => {
     </div>
   );
 };
-
-// Card.propTypes = {
-//   // eslint-disable-next-line
-//   stockName: propTypes.string.isRequired,
-//   // eslint-disable-next-line
-//   image: propTypes.string.isRequired,
-//   // eslint-disable-next-line
-//   price: propTypes.string,
-//   // eslint-disable-next-line
-//   symbol: propTypes.string,
-// };
 export default Card;
