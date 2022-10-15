@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import '@testing-library/jest-dom/extend-expect';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Home from '../src/components/StockList';
-import Nav from '../src/components/Nav';
-import store from '../src/redux/configureStore';
+import Home from '../components/StockList';
+import Nav from '../components/Nav';
+import store from '../redux/configureStore';
 
 test('renders Home component', () => {
   render(
