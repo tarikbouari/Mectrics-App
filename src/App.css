@@ -37,3 +37,261 @@ h3 {
 .setting {
   color: #fff;
 }
+
+.header-text {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.containerCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.box-img {
+  width: 50%;
+}
+
+.cardCoin {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  background-color: #4369b2;
+  gap: 1rem;
+}
+
+/*
+.cardCoin:nth-of-type(3) {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  background-color: #3F62A6;
+  gap: 1rem;
+} */
+
+.cardCoin:nth-of-type(1) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(4) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(5) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(8) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(9) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(12) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(13) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(16) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(17) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(20) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(21) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(24) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(25) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(28) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(29) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(32) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(33) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(36) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(37) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(40) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(41) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(44) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(45) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(48) {
+  background-color: #3f62a6;
+}
+
+.cardCoin:nth-of-type(49) {
+  background-color: #3f62a6;
+}
+
+.arrow-right {
+  align-self: flex-end;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.arrow-left {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+}
+
+.coinlogo {
+  width: 80%;
+  height: auto;
+}
+
+.symbol {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.title {
+  color: white;
+  padding: 1rem;
+}
+
+.head-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+}
+
+.head-item img {
+  width: 20%;
+  height: auto;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+ul li {
+  list-style: none;
+  color: #fff;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #35548b;
+  padding: 1rem;
+}
+
+.list-item:nth-child(odd) {
+  background-color: #4168af;
+}
+
+.list-item:nth-child(3) {
+  display: none;
+}
+
+.list-item:nth-child(11) {
+  display: none;
+}
+
+form {
+  border-radius: 4rem;
+}
+
+form select {
+  padding: 0.5rem;
+}
+
+.homeContainer {
+  margin-bottom: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.3rem;
+  }
+
+  .symbol {
+    width: 40%;
+  }
+
+  .arrow-right {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow-left {
+    width: 40px;
+    height: 40px;
+  }
+
+  .containerCard {
+    gap: 2rem;
+    padding: 3rem;
+  }
+
+  .coinlogo {
+    width: 80%;
+    height: auto;
+  }
+}
