@@ -37,6 +37,7 @@ h3 {
 .setting {
   color: #fff;
 }
+
 .header-text {
   color: #fff;
   text-transform: capitalize;
@@ -49,6 +50,7 @@ h3 {
   width: 100%;
   gap: 1rem;
 }
+
 .box-img {
   width: 50%;
 }
@@ -112,6 +114,7 @@ h3 {
   gap: 0.5rem;
   margin: 0;
 }
+
 ul {
   padding-left: 0 !important;
 }
@@ -135,9 +138,6 @@ ul li {
 .list-item:nth-child(3) {
   display: none;
 }
-.list-item:nth-child(4) {
-  background-color: ;
-} 
 
 .list-item:nth-child(11) {
   display: none;
@@ -150,6 +150,38 @@ form {
 form select {
   padding: 0.5rem;
 }
+
 .homeContainer {
   margin-bottom: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.3rem;
+  }
+
+  .symbol {
+    width: 40%;
+  }
+
+  .arrow-right {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow-left {
+    width: 40px;
+    height: 40px;
+    padding-top: 0.5rem;
+  }
+
+  .containerCard {
+    gap: 2rem;
+    padding: 3rem;
+  }
+
+  .coinlogo {
+    width: 80%;
+    height: auto;
+  }
 }
