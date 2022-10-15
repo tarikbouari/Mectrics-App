@@ -63,7 +63,6 @@ _This displays the results of the test suites already written on the project to 
 
 > coming soon :smile:
 
-## Authors
 
 👤 **Tarike Bouari**
 
