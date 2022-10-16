@@ -8,11 +8,11 @@ import Details from './components/Details';
 function App() {
   return (
     <div>
-      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="details" element={<Details />} />
       </Routes>
+      <Nav />
     </div>
   );
 }
