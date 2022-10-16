@@ -30,10 +30,43 @@ const Home = () => {
 
   return (
     <>
-      <div className="my-3 homeContainer">
-        <h1 className="header-text container"> Welcome To CryptoCoin</h1>
+      <div className="container homeContainer">
+        <div className="select-category container">
+          <span className="whatchlist">Whatchlist</span>
+          <form className="select-form">
+             {/* eslint-disable-next-line */}
+            <button className="btn-gain" value="All" onClick={handleOption}>
+              {' '}
+              All
+              {' '}
+            </button>
+             {/* eslint-disable-next-line */}
+            <button className="btn-gain" value="Top10" onClick={handleOption}>
+              {' '}
+              Top 10
+              {' '}
+            </button>
+             {/* eslint-disable-next-line */}
+            <button
+              className="btn-gain"
+              value="Gainers"
+              onClick={handleOption}
+            >
+              {' '}
+              Top Gainers
+              {' '}
+            </button>
+             {/* eslint-disable-next-line  */}
+            <button className="btn-gain" value="Losers" onClick={handleOption}>
+              {' '}
+              Top Losers
+              {' '}
+            </button>
+          </form>
+
+        </div>
         <div>
-          <h3 className="py-3 container">Whatchlist</h3>
+
           <div className="category py-3">
             <form
               className="form container"
@@ -41,12 +74,12 @@ const Home = () => {
               id="category"
               onChange={handleOption}
             >
-              <select>
+              {/* <select>
                 <option value="All"> All crypto</option>
                 <option value="Top10"> Top 10</option>
                 <option value="Gainers"> Top Gainers</option>
                 <option value="Losers">Top Losers</option>
-              </select>
+              </select> */}
             </form>
           </div>
           {categoriesState.category === 'Top10' && (
