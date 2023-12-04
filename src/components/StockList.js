@@ -13,7 +13,7 @@ const Home = () => {
     if (stocks.length === 0) {
       dispatch(getStock());
     }
-  }, []);
+  }, [dispatch, stocks.length]);
 
   const getTopTen = stocks.filter((item) => item.rank < 10);
   const getTopGainers = stocks.filter(
