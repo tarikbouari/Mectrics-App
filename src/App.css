@@ -47,17 +47,12 @@ h3 {
 
 .banner {
   background: #061121;
-  background: radial-gradient(at left top, #1543a7, #061121); 
+  background: radial-gradient(at left top, #1543a7, #061121);
 }
 
 .logo-bg {
   background: #061121;
-  background: radial-gradient(at left top, #1543a7, #061121); 
-}
-
-.logo-bg {
-  background: #061121;
-  background: radial-gradient(at left top, #1543a7, #061121); 
+  background: radial-gradient(at left top, #1543a7, #061121);
 }
 
 .bg-serv {
