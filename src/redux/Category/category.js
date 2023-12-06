@@ -1,5 +1,9 @@
 const GET_CATEGORY = 'metrics/categories/GET_CATEGORY';
 
+/*  Actions are plain JavaScript objects that describe events in the application.
+They must have a type property to indicate the type of action being performed.
+ Actions are typically created using action creator functions. */
+
 export const getCategory = (category) => ({
   type: GET_CATEGORY,
   payload: category,

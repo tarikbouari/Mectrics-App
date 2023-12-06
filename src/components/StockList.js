@@ -5,7 +5,8 @@ import Card from './StockCard';
 import { getCategory } from '../redux/Category/category';
 
 const Home = () => {
-  const stocks = useSelector((state) => state.stock);
+  const stocks = useSelector((state) => state.stock.data);
+  console.log(stocks);
   const categoriesState = useSelector((state) => state.category);
   const dispatch = useDispatch();
 
@@ -13,7 +14,7 @@ const Home = () => {
     if (stocks.length === 0) {
       dispatch(getStock());
     }
-  }, []);
+  }, [dispatch, stocks.length]);
 
   const getTopTen = stocks.filter((item) => item.rank < 10);
   const getTopGainers = stocks.filter(

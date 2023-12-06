@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   padding: 0;
   margin: 0;
@@ -6,13 +10,21 @@
 
 header {
   height: 70px;
-  background-color: #35548b;
+  background-color: #010118;
 }
 
 body {
-  background-color: #4369b2;
+  font-size: 18px !important;
+  color: #fff;
 }
 
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=053499&c2=296dc5&gt=r&gd=dtl
+
+background: #053499;
+background: radial-gradient(at left top, #053499, #296DC5);
+*/
 nav {
   width: 100%;
   display: flex;
@@ -21,13 +33,39 @@ nav {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 h3 {
   color: #fff;
 }
 
 .left {
-  gap: 1rem;
+  gap: 3rem;
   display: flex;
+}
+
+.banner {
+  background: #061121;
+  background: radial-gradient(at left top, #1543a7, #061121);
+}
+
+.logo-bg {
+  background: #061121;
+  background: radial-gradient(at left top, #1543a7, #061121);
+}
+
+.boot {
+  width: fit-content;
+}
+
+.coin {
+  background-image: url('./images/25469807_crypto-removebg-preview.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 20rem;
 }
 
 .micro {
