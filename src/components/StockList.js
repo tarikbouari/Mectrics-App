@@ -5,7 +5,8 @@ import Card from './StockCard';
 import { getCategory } from '../redux/Category/category';
 
 const Home = () => {
-  const stocks = useSelector((state) => state.stock);
+  const stocks = useSelector((state) => state.stock.data);
+  console.log(stocks);
   const categoriesState = useSelector((state) => state.category);
   const dispatch = useDispatch();
 

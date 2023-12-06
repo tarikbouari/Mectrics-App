@@ -10,11 +10,12 @@
 
 header {
   height: 70px;
-  background-color: #061121;
+  background-color: #010118;
 }
 
 body {
   font-size: 18px !important;
+  color: #fff;
 }
 
 /*
@@ -53,10 +54,6 @@ h3 {
 .logo-bg {
   background: #061121;
   background: radial-gradient(at left top, #1543a7, #061121);
-}
-
-.bg-serv {
-  background-color: #010118;
 }
 
 .boot {
