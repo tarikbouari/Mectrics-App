@@ -5,7 +5,7 @@ const Service = () => (
   <div className="w-full bg-[#010118] py-11 text-center">
     <h3 className=" text-4xl capitalize py-[5rem] "> why to choose crypto </h3>
     <div className="container grid grid-cols-3 gap-3 w-[60%]">
-      <div className="rounded p-4 border flex flex-col items-center justify-center gap-2 bg-[#010130] ">
+      <div className="rounded p-4 border border-[#cecece32] flex flex-col items-center justify-center gap-2 bg-[#010130] ">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#139AFA" d="M19 13c.34 0 .67.04 1 .09V10a2 2 0 0 0-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6a2 2 0 0 0-2 2v10c0 1.11.89 2 2 2h7.81c-.51-.88-.81-1.9-.81-3c0-3.31 2.69-6 6-6M9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6m3 11a2 2 0 1 1 2-2c0 1.11-.89 2-2 2m10.5.25L17.75 22L15 19l1.16-1.16l1.59 1.59l3.59-3.59l1.16 1.41Z" /></svg>
         <h3 className="text-2xl">Secure</h3>
         <span className="text-white"> Browserslist caniuselite is outdated. Please run</span>
