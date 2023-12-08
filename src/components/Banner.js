@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import Sponsor from './Sponsor';
+// import Sponsor from './Sponsor';
 
 const Banner = () => (
-  <div className=" banner">
+  <div className=" banner h-[80vh] flex">
     <div className="container flex items-center justify-center gap-2  p-4 text-white">
       <div className="flex flex-col gap-4 w-[60%] px-8">
         <h1 className="text-6xl text-[#139AFA]">Stay Ahead of the Crypto Curve </h1>
@@ -27,7 +27,6 @@ const Banner = () => (
       <div className="coin  w-[60%]" />
 
     </div>
-    <Sponsor />
   </div>
 
 );
