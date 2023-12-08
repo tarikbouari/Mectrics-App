@@ -1,3 +1,4 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,8 +18,12 @@ body {
   font-size: 18px !important;
   color: #fff;
 }
-h1, h2, h3, h4 {
- font-family: Poppins;
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Poppins';
 }
 
 /*
