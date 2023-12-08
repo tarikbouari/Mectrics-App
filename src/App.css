@@ -17,6 +17,9 @@ body {
   font-size: 18px !important;
   color: #fff;
 }
+h1, h2, h3, h4 {
+ font-family: Poppins;
+}
 
 /*
 * Created with https://www.css-gradient.com
@@ -61,7 +64,7 @@ h3 {
 }
 
 .coin {
-  background-image: url('./images/25469807_crypto-removebg-preview.png');
+  background-image: url('./images/d3.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -113,6 +116,36 @@ h3 {
   background-color: #3F62A6;
   gap: 1rem;
 } */
+
+.email-container {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.email-input {
+  width: 100%;
+  font-size: 16px !important;
+  box-sizing: border-box;
+}
+
+.send-button {
+  position: absolute;
+  top: 50%;
+  right: 0.3rem;
+  transform: translateY(-50%);
+  background-color: #2280c3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .email-container {
+    max-width: 100%;
+  }
+}
 
 .cardCoin:nth-of-type(1) {
   background-color: #3f62a6;
