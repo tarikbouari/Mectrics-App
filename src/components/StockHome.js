@@ -15,6 +15,7 @@ const StockHome = () => {
     }
   }, [dispatch, stockData.length]);
 
+
   const getTopTen = stockData.filter((item) => item.rank < 5);
 
   console.log(getTopTen);
