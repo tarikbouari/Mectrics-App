@@ -1,13 +1,19 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+// import { Link } from 'react-router-dom';
 import { getStock } from '../redux/SotckActions/stocks';
 import { getCategory } from '../redux/Category/category';
+// import { getDetails } from '../redux/Details/coinsDetails';
 // import Card from '../components/StockCard';
 
 const Price = () => {
   const stocks = useSelector((state) => state.stock.data);
   const categoriesState = useSelector((state) => state.category.category);
+  // const stockDetails = useSelector((state) => state.detail.details);
   const dispatch = useDispatch();
+  // fetch api base on a specific stock detail
+
+  //
 
   useEffect(() => {
     if (stocks.length === 0) {
@@ -42,7 +48,7 @@ const Price = () => {
             <button type="button" className="border-r p-2 border-[#cecece] hover:text-[#2280c3]" onClick={HandleAll}>All coin</button>
           </div>
           <form
-            onChange={handleOption}
+            onChange={() => handleOption}
             name="category"
             id="category"
             className="text-[#010118] rounded-sm "
@@ -130,6 +136,7 @@ const Price = () => {
         {categoriesState === 'All' && (
         <>
           <h3 className="mt-[5rem] text-3xl">Today &apos; Cryptocurrency prices</h3>
+
           <section className=" my-[2rem] bg-[#122036]  pb-4 ">
             <table className="w-full">
               <thead>
@@ -168,7 +175,6 @@ const Price = () => {
                     <td>{item.marketCap}</td>
                   </tr>
                 ))}
-
               </tbody>
 
             </table>
@@ -266,9 +272,7 @@ const Price = () => {
                     <td>{item.marketCap}</td>
                   </tr>
                 ))}
-
               </tbody>
-
             </table>
 
           </section>
