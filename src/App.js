@@ -14,7 +14,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="details" element={<Details />} />
+        <Route path="/price/:name" element={<Details />} />
         <Route path="price" element={<Price />} />
       </Routes>
       <Footer />
