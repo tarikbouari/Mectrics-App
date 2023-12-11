@@ -9,7 +9,7 @@ import { getCategory } from '../redux/Category/category';
 const Price = () => {
   const stocks = useSelector((state) => state.stock.data);
   const categoriesState = useSelector((state) => state.category.category);
-  // const stockDetails = useSelector((state) => state.detail.details);
+  const stockDetails = useSelector((state) => state.detail.details);
   const dispatch = useDispatch();
   // fetch api base on a specific stock detail
 
