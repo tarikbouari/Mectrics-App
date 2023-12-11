@@ -175,31 +175,32 @@ const Price = () => {
               </thead>
               <tbody>
                 {stocks.map((item) => (
-                  <Link to={`${item.name}`} key={item.uuid} onClick={() => handleStockClick(item.uuid)}>
-                    <tr className="border-b border-[#cecece5c]">
-                      <td className="px-4 py-4">{item.rank}</td>
-                      <td className="flex items-center gap-2  px-4 py-4">
+                  <tr key={item.uuid} className="border-b border-[#cecece5c] cursor-pointer">
+                    <td className="px-4 py-4">{item.rank}</td>
+                    <td className="flex items-center gap-2  px-4 py-4">
+                      <Link to={`${item.name}`} onClick={() => handleStockClick(item.uuid)}>
                         <img src={item.iconUrl} alt={item.name} className="w-[25px] h-[25px] " />
-                        <div className="flex flex-col">
-                          <span className="text-sm">
-                            {item.name}
-                            {' '}
-                          </span>
-                          <span className="text-sm">
-                            {item.symbol}
-                            {' '}
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        $
-                        {Number(item.price).toFixed(2)}
-                      </td>
-                      <td className={item.change < 0 ? 'text-[#E62F31]' : 'text-[#1DB39B]'}>{item.change}</td>
-                      <td>{item.rank}</td>
-                      <td>{item.marketCap}</td>
-                    </tr>
-                  </Link>
+                      </Link>
+
+                      <div className="flex flex-col">
+                        <span className="text-sm">
+                          {item.name}
+                          {' '}
+                        </span>
+                        <span className="text-sm">
+                          {item.symbol}
+                          {' '}
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      $
+                      {Number(item.price).toFixed(2)}
+                    </td>
+                    <td className={item.change < 0 ? 'text-[#E62F31]' : 'text-[#1DB39B]'}>{item.change}</td>
+                    <td>{item.rank}</td>
+                    <td>{item.marketCap}</td>
+                  </tr>
                 ))}
               </tbody>
 
