@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getStock } from '../redux/SotckActions/stocks';
 import { getCategory } from '../redux/Category/category';
-// import { getDetails } from '../redux/Details/coinsDetails';
+import { getDetails } from '../redux/Details/coinsDetails';
 // import Card from '../components/StockCard';
 
 const Price = () => {
   const stocks = useSelector((state) => state.stock.data);
   const categoriesState = useSelector((state) => state.category.category);
-  const stockDetails = useSelector((state) => state.detail.details);
+  // const stockDetails = useSelector((state) => state.detail.details);
   const dispatch = useDispatch();
   // fetch api base on a specific stock detail
 
