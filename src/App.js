@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router';
 import Nav from './components/Nav';
 import HomePage from './Pages/Home';
 // import Home from './components/StockList';
-import Details from './components/Details';
+import Details from './Pages/Details';
 import Price from './Pages/Prices';
 import Footer from './components/Bas';
 
