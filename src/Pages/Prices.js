@@ -13,7 +13,29 @@ const Price = () => {
   const dispatch = useDispatch();
   // fetch api base on a specific stock detail
 
-  //
+  const handleStockClick = (stockId) => {
+    const url = `https://coinranking1.p.rapidapi.com/coin/${stockId}`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'b9f261dee6mshf5721e09b0a9f8ep1a16b9jsnc187afe74e7b',
+        'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
+      },
+    };
+
+    const fetchStockDetails = async () => {
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        const detail = result.data.coin;
+        console.log(detail);
+        dispatch(getDetails(detail));
+      } catch (error) {
+        throw new Error('Failed fecthing stock details');
+      }
+    };
+    fetchStockDetails();
+  };
 
   useEffect(() => {
     if (stocks.length === 0) {
