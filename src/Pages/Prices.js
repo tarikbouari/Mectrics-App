@@ -1,13 +1,42 @@
+/* eslint-disable max-len */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getStock } from '../redux/SotckActions/stocks';
 import { getCategory } from '../redux/Category/category';
+import { getDetails } from '../redux/Details/coinsDetails';
 // import Card from '../components/StockCard';
 
 const Price = () => {
   const stocks = useSelector((state) => state.stock.data);
   const categoriesState = useSelector((state) => state.category.category);
+  // const stockDetails = useSelector((state) => state.detail.details);
   const dispatch = useDispatch();
+  // fetch api base on a specific stock detail
+
+  const handleStockClick = (stockId) => {
+    const url = `https://coinranking1.p.rapidapi.com/coin/${stockId}`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'b9f261dee6mshf5721e09b0a9f8ep1a16b9jsnc187afe74e7b',
+        'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
+      },
+    };
+
+    const fetchStockDetails = async () => {
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        const detail = result.data.coin;
+        console.log(detail);
+        dispatch(getDetails(detail));
+      } catch (error) {
+        throw new Error('Failed fecthing stock details');
+      }
+    };
+    fetchStockDetails();
+  };
 
   useEffect(() => {
     if (stocks.length === 0) {
@@ -28,6 +57,7 @@ const Price = () => {
   const handleOption = (e) => {
     e.preventDefault();
     const category = e.target.value;
+    console.log(category);
     dispatch(getCategory(category));
   };
   const HandleAll = () => {
@@ -130,6 +160,7 @@ const Price = () => {
         {categoriesState === 'All' && (
         <>
           <h3 className="mt-[5rem] text-3xl">Today &apos; Cryptocurrency prices</h3>
+
           <section className=" my-[2rem] bg-[#122036]  pb-4 ">
             <table className="w-full">
               <thead>
@@ -144,10 +175,13 @@ const Price = () => {
               </thead>
               <tbody>
                 {stocks.map((item) => (
-                  <tr key={item.uuid} className="border-b border-[#cecece5c]">
+                  <tr key={item.uuid} className="border-b border-[#cecece5c] cursor-pointer">
                     <td className="px-4 py-4">{item.rank}</td>
                     <td className="flex items-center gap-2  px-4 py-4">
-                      <img src={item.iconUrl} alt={item.name} className="w-[25px] h-[25px] " />
+                      <Link to={`${item.name}`} onClick={() => handleStockClick(item.uuid)}>
+                        <img src={item.iconUrl} alt={item.name} className="w-[25px] h-[25px] " />
+                      </Link>
+
                       <div className="flex flex-col">
                         <span className="text-sm">
                           {item.name}
@@ -168,7 +202,6 @@ const Price = () => {
                     <td>{item.marketCap}</td>
                   </tr>
                 ))}
-
               </tbody>
 
             </table>
@@ -179,12 +212,11 @@ const Price = () => {
         )}
         {categoriesState === 'Gainers' && (
         <>
-          <h3 className="mt-[5rem] text-3xl">Today &apos; Cryptocurrency prices</h3>
+          <h3 className="mt-[5rem] text-3xl">Top Gainers Cryptocurrency prices</h3>
           <section className=" my-[2rem] bg-[#122036]  pb-4 ">
             <table className="w-full">
               <thead>
                 <tr className="border-b bg-[#122040]  ">
-                  <th>#</th>
                   <th className="px-4 py-4">name</th>
                   <th>price</th>
                   <th>24 change</th>
@@ -195,7 +227,6 @@ const Price = () => {
               <tbody>
                 {getTopGainers.map((item) => (
                   <tr key={item.uuid} className="border-b border-[#cecece5c]">
-                    <td>{item.length}</td>
                     <td className="flex items-center gap-2  px-4 py-4">
                       <img src={item.iconUrl} alt={item.name} className="w-[25px] h-[25px] " />
                       <div className="flex flex-col">
@@ -229,7 +260,7 @@ const Price = () => {
         )}
         {categoriesState === 'Losers' && (
         <>
-          <h3 className="mt-[5rem] text-3xl">Today &apos; Cryptocurrency prices</h3>
+          <h3 className="mt-[5rem] text-3xl">Today top Losers Cryptocurrency prices</h3>
           <section className=" my-[2rem] bg-[#122036]  pb-4 ">
             <table className="w-full">
               <thead>
@@ -266,9 +297,7 @@ const Price = () => {
                     <td>{item.marketCap}</td>
                   </tr>
                 ))}
-
               </tbody>
-
             </table>
 
           </section>
