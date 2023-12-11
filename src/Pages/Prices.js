@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -56,6 +57,7 @@ const Price = () => {
   const handleOption = (e) => {
     e.preventDefault();
     const category = e.target.value;
+    console.log(category);
     dispatch(getCategory(category));
   };
   const HandleAll = () => {
@@ -70,7 +72,7 @@ const Price = () => {
             <button type="button" className="border-r p-2 border-[#cecece] hover:text-[#2280c3]" onClick={HandleAll}>All coin</button>
           </div>
           <form
-            onChange={() => handleOption}
+            onChange={handleOption}
             name="category"
             id="category"
             className="text-[#010118] rounded-sm "
@@ -173,29 +175,31 @@ const Price = () => {
               </thead>
               <tbody>
                 {stocks.map((item) => (
-                  <tr key={item.uuid} className="border-b border-[#cecece5c]">
-                    <td className="px-4 py-4">{item.rank}</td>
-                    <td className="flex items-center gap-2  px-4 py-4">
-                      <img src={item.iconUrl} alt={item.name} className="w-[25px] h-[25px] " />
-                      <div className="flex flex-col">
-                        <span className="text-sm">
-                          {item.name}
-                          {' '}
-                        </span>
-                        <span className="text-sm">
-                          {item.symbol}
-                          {' '}
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      $
-                      {Number(item.price).toFixed(2)}
-                    </td>
-                    <td className={item.change < 0 ? 'text-[#E62F31]' : 'text-[#1DB39B]'}>{item.change}</td>
-                    <td>{item.rank}</td>
-                    <td>{item.marketCap}</td>
-                  </tr>
+                  <Link to={`${item.name}`} key={item.uuid} onClick={() => handleStockClick(item.uuid)}>
+                    <tr className="border-b border-[#cecece5c]">
+                      <td className="px-4 py-4">{item.rank}</td>
+                      <td className="flex items-center gap-2  px-4 py-4">
+                        <img src={item.iconUrl} alt={item.name} className="w-[25px] h-[25px] " />
+                        <div className="flex flex-col">
+                          <span className="text-sm">
+                            {item.name}
+                            {' '}
+                          </span>
+                          <span className="text-sm">
+                            {item.symbol}
+                            {' '}
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        $
+                        {Number(item.price).toFixed(2)}
+                      </td>
+                      <td className={item.change < 0 ? 'text-[#E62F31]' : 'text-[#1DB39B]'}>{item.change}</td>
+                      <td>{item.rank}</td>
+                      <td>{item.marketCap}</td>
+                    </tr>
+                  </Link>
                 ))}
               </tbody>
 
@@ -207,12 +211,11 @@ const Price = () => {
         )}
         {categoriesState === 'Gainers' && (
         <>
-          <h3 className="mt-[5rem] text-3xl">Today &apos; Cryptocurrency prices</h3>
+          <h3 className="mt-[5rem] text-3xl">Top Gainers Cryptocurrency prices</h3>
           <section className=" my-[2rem] bg-[#122036]  pb-4 ">
             <table className="w-full">
               <thead>
                 <tr className="border-b bg-[#122040]  ">
-                  <th>#</th>
                   <th className="px-4 py-4">name</th>
                   <th>price</th>
                   <th>24 change</th>
@@ -223,7 +226,6 @@ const Price = () => {
               <tbody>
                 {getTopGainers.map((item) => (
                   <tr key={item.uuid} className="border-b border-[#cecece5c]">
-                    <td>{item.length}</td>
                     <td className="flex items-center gap-2  px-4 py-4">
                       <img src={item.iconUrl} alt={item.name} className="w-[25px] h-[25px] " />
                       <div className="flex flex-col">
@@ -257,7 +259,7 @@ const Price = () => {
         )}
         {categoriesState === 'Losers' && (
         <>
-          <h3 className="mt-[5rem] text-3xl">Today &apos; Cryptocurrency prices</h3>
+          <h3 className="mt-[5rem] text-3xl">Today top Losers Cryptocurrency prices</h3>
           <section className=" my-[2rem] bg-[#122036]  pb-4 ">
             <table className="w-full">
               <thead>
