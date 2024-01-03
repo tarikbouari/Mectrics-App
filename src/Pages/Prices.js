@@ -60,10 +60,12 @@ const Price = () => {
     console.log(category);
     dispatch(getCategory(category));
   };
+
   const HandleAll = () => {
     const category = 'All';
     dispatch(getCategory(category));
   };
+
   return (
     <div className="w-full bg-[#010118]">
       <div className="container py-[5rem] ">

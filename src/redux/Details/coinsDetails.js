@@ -6,7 +6,7 @@ export const getDetails = (payload) => ({
 });
 
 const initialState = {
-  details: [],
+  details: {},
 };
 
 const detailsReducer = (state = initialState, action) => {
