@@ -15,14 +15,6 @@ const Nav = () => (
         </li>
         <li className="hover:text-[#2280c3]">About</li>
         <li className="hover:text-[#2280c3]">blog</li>
-        <li>
-          <Link
-            to="contact"
-            className="capitalize px-5 py-2   outline outline-2 outline-[#2280c3] cursor-pointer rounded-full hover:bg-[#4eccaf] boot md:px-4 md:py-3"
-          >
-            Login
-          </Link>
-        </li>
       </ul>
 
     </nav>
