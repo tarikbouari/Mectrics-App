@@ -3,12 +3,33 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import CryptoChart from '../components/CryptoChart';
 // import { FaArrowCircleLeft } from 'react-icons/fa';
 
 const Details = () => {
   const detailsCoins = useSelector((state) => state.detail.details);
+  // const historyData = useSelector((state) => state.history.history);
   const detailArr = [detailsCoins];
   console.log('this cons details =>', detailArr);
+
+  // const historyData = useSelector((state) => state.history.history);
+
+  // const url = 'https://api.coincap.io/v2/assets/bitcoin/history?interval=d1';
+
+  // useEffect(() => {
+  //   const fecthHistory = async () => {
+  //     try {
+  //       const response = await fetch(url);
+  //       const result = await response.json();
+  //       const dataArr = result.data;
+  //       console.log('This is the history', dataArr);
+  //     } catch (err) {
+  //       console.log('Error fetching history');
+  //     }
+  //   };
+  //   fecthHistory();
+  // }, []);
 
   return (
 
@@ -51,7 +72,8 @@ const Details = () => {
                 </div>
 
                 <div className="  py-[5rem] ">
-                  <span>display chart </span>
+                  <CryptoChart />
+                  {console.log(item.name)}
                 </div>
                 <div className="other  py-[5rem] grid grid-cols-5  ">
                   <div>
