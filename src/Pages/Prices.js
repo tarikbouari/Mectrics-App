@@ -2,9 +2,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import { getStock } from '../redux/SotckActions/stocks';
+import { getHistory } from '../redux/Details/coinHistory';
 import { getCategory } from '../redux/Category/category';
 import { getDetails } from '../redux/Details/coinsDetails';
+
 // import Card from '../components/StockCard';
 
 const Price = () => {
@@ -14,8 +17,9 @@ const Price = () => {
   const dispatch = useDispatch();
   // fetch api base on a specific stock detail
 
-  const handleStockClick = (stockId) => {
+  const handleStockClick = (stockId, stockName) => {
     const url = `https://coinranking1.p.rapidapi.com/coin/${stockId}`;
+    const urlHistory = `https://api.coincap.io/v2/assets/${stockName.toLowerCase()}/history?interval=d1`;
     const options = {
       method: 'GET',
       headers: {
@@ -23,7 +27,17 @@ const Price = () => {
         'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
       },
     };
+    const fecthHistory = async () => {
+      try {
+        const response = await axios.get(urlHistory);
+        const dataArr = response.data;
+        dispatch(getHistory(dataArr));
+      } catch (err) {
+        console.log('Error fetching history');
+      }
+    };
 
+    fecthHistory();
     const fetchStockDetails = async () => {
       try {
         const response = await fetch(url, options);
@@ -180,7 +194,7 @@ const Price = () => {
                   <tr key={item.uuid} className="border-b border-[#cecece5c] cursor-pointer">
                     <td className="px-4 py-4">{item.rank}</td>
                     <td className="flex items-center gap-2  px-4 py-4">
-                      <Link to={`${item.name}`} onClick={() => handleStockClick(item.uuid)}>
+                      <Link to={`${item.name}`} onClick={() => handleStockClick(item.uuid, item.name)}>
                         <img src={item.iconUrl} alt={item.name} className="w-[25px] h-[25px] " />
                       </Link>
 
