@@ -2,6 +2,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import App from '../components/ApexChart';
 // import CryptoChart from '../components/CryptoChart';
 // import { FaArrowCircleLeft } from 'react-icons/fa';
 const Details = () => {
@@ -11,22 +12,11 @@ const Details = () => {
   console.log('this cons details =>', detailArr);
 
   const historyData = useSelector((state) => state.history.history);
-  console.log(historyData);
-  // const url = 'https://api.coincap.io/v2/assets/bitcoin/history?interval=d1';
-
-  // useEffect(() => {
-  //   const fecthHistory = async () => {
-  //     try {
-  //       const response = await fetch(url);
-  //       const result = await response.json();
-  //       const dataArr = result.data;
-  //       console.log('This is the history', dataArr);
-  //     } catch (err) {
-  //       console.log('Error fetching history');
-  //     }
-  //   };
-  //   fecthHistory();
-  // }, []);
+  const array = historyData.data;
+  console.log(array);
+  const arrayH = array.map((d) => d.priceUsd);
+  // const arrayX = array.map((d) => d.time);
+  console.log(arrayH);
 
   return (
     <>
@@ -69,8 +59,7 @@ const Details = () => {
                   </div>
 
                   <div className="  py-[5rem] ">
-                    {/* <CryptoChart /> */}
-                    {console.log(item.name)}
+                    <App chartData={arrayH} />
                   </div>
                   <div className="other  py-[5rem] grid grid-cols-5  ">
                     <div>
