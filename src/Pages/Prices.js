@@ -29,10 +29,8 @@ const Price = () => {
     };
     const fecthHistory = async () => {
       try {
-        const response = axios.get(urlHistory);
-        console.log('this is result arr', response.data);
+        const response = await axios.get(urlHistory);
         const dataArr = response.data;
-        console.log('This is the history', dataArr);
         dispatch(getHistory(dataArr));
       } catch (err) {
         console.log('Error fetching history');
