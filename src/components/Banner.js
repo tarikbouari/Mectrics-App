@@ -5,7 +5,7 @@ import crypto from '../images/dé.png';
 
 const Banner = () => (
   <div className=" banner md:h-[80vh] flex w-full">
-    <div className="container flex items-center justify-center gap-2 md:pt-[5rem] px-4 text-white">
+    <div className="container flex items-center justify-center  max-md:pt-16 gap-2 md:pt-[5rem] px-4 text-white">
       <div className="flex flex-col gap-4  md:w-[50%] py-8">
         <h1 className="max-md:text-4xl md:text-6xl max-w-[536px]  md:text-left max-md:text-center text-[#139AFA] ">Stay Ahead of the Crypto Curve </h1>
         <p className="max-md:text-center md:text-left max-w-[536px]">
@@ -25,7 +25,7 @@ const Banner = () => (
           Explore
         </Link>
       </div>
-      <div className="w-[50%]">
+      <div className="w-[50%] max-md:hidden">
         <img src={crypto} alt="cryto" />
       </div>
     </div>
