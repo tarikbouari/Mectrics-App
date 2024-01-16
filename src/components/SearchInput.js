@@ -1,19 +1,16 @@
-import React, {useState} from "react";
+// import React, { useState } from 'react';
 
+// const Search = () => {
+//   const handleSearch = () => {
 
-const Search = () => {
+//   };
 
-    const handleSearch = () => { 
+//   return (
+//     <form>
+//       <label>Search</label>
+//       <input type="search" placeholder="Search" className="" />
 
-    }
+//     </form>
 
-    return (
-        <form>
-            <label>Search</label>
-            <input type="search" placeholder="Search" className="" />
-
-        </form>
-
-
-    )
-}
+//   );
+// };
