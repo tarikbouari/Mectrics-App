@@ -12,6 +12,7 @@ class App extends Component {
       options: {
         chart: {
           id: 'basic-bar',
+          fill: '#FFF',
         },
         xaxis: {
           categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
@@ -28,14 +29,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app max-w-[700]">
+      <div className="app max-w-[90%]">
         <div className="row">
           <div className="mixed-chart">
             <Chart
               options={this.state.options}
               series={this.state.series}
               type="line"
-              width="800"
             />
           </div>
         </div>
