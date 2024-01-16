@@ -5,7 +5,7 @@ import Mobile from '../components/Mobile';
 import Review from '../components/Reviews';
 
 const HomePage = () => (
-  <div className="">
+  <div className="w-full">
     <Banner />
     <Service />
     <Mobile />
