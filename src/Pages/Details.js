@@ -14,7 +14,7 @@ const Details = () => {
   const historyData = useSelector((state) => state.history.history);
   const array = historyData.data;
   console.log(array);
-  const arrayH = array.map((d) => d.priceUsd);
+  const arrayH = array?.map((d) => Number(d.priceUsd).toFixed(2));
   // const arrayX = array.map((d) => d.time);
   console.log(arrayH);
 
@@ -45,7 +45,7 @@ const Details = () => {
 
             </div>
             <div className="flex gap-10">
-              <div className="w-[70%] ">
+              <div className="max-w-[70%] ">
                 <div className="col1 flex flex-col py-[5rem] bg-[#122036] p-4">
                   <div className="flex flex-col py-[2rem]">
                     <div className="flex">
