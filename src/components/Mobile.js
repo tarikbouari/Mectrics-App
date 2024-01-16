@@ -4,10 +4,10 @@ import phone from '../images/rvimage.png';
 
 const Mobile = () => (
   <div className="w-full banner">
-    <div className="container flex py-[5rem] justify-center items-center">
-      <div className="w-[40%] ">
-        <h3 className="text-5xl w-[85%] text-[]"> Get the best trading expereince with our mobile app</h3>
-        <p className="py-[2rem] text-[#7D7D7D] ">
+    <div className="container flex max-md:flex-col py-[5rem] justify-center items-center">
+      <div className="max-md:w-full w-[40%] ">
+        <h3 className="text-2xl md:text-4xl w-[80%] max-md:mx-auto text-center"> Get the best trading expereince with our mobile app</h3>
+        <p className="py-[2rem] max-md:text-center text-[#fff] ">
           {' '}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
